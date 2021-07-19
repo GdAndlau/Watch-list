@@ -6,6 +6,9 @@
 
 <h3>These are the bookmarks: <%@bookmark.each do |info| %></h3>
 <p><%= info["comment"] %></p>
+<p><%= link_to "delete this bookmark", bookmark_path(info["id"]), method: :delete %></p>
 <% end %>
 
-<%= link_to "delete this bookmark", method: :delete %>
+<%= link_to "delete this list", list_path(@list.id), method: :delete %>
+
+
