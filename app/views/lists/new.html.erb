@@ -1,0 +1,6 @@
+<h1>So you want to add a list?</h1>
+
+<%= form_for @list do |f| %>
+  List name: <%= f.text_field :name %><br />
+  <%= f.submit %>
+<% end %>
