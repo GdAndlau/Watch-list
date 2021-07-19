@@ -3,4 +3,9 @@
 <h2>What details do you need?</h2>
 
 
+
+<h3>These are the bookmarks: <%@bookmark.each do |info| %></h3>
+<p><%= info["comment"] %></p>
+<% end %>
+
 <%= link_to "delete this bookmark", method: :delete %>

@@ -6,6 +6,10 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @all_bookmarks = Bookmark.all
+    @bookmark = @all_bookmarks.select{ |x| x[:list_id] === @list.id }
+
+    #select {|x| x.select { |y| y.list_id == @list.id} }
   end
 
   def new
