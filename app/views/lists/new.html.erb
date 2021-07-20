@@ -1,8 +1,13 @@
-<h1>So you want to add a list?</h1>
+<div class="list-show-background">
 
-<%= form_for @list do |f| %>
-  List name: <%= f.text_field :name %><br />
-  <%= f.submit %>
-<% end %>
+  <h1>So you want to add a list?</h1>
 
+  <%= form_for @list do |f| %>
+    List name: <%= f.text_field :name %><br />
+    <%= f.submit %>
+  <% end %>
+
+  <%= link_to "back to the main list", lists_path, class: "btn btn-primary" %>
+
+</div>
 

@@ -11,7 +11,7 @@ class BookmarksController < ApplicationController
     @bookmark.list = @list
 
     if @bookmark.save
-      redirect_to lists_new_path
+      redirect_to list_path(@list)
     else
       render :new
     end
@@ -25,6 +25,6 @@ class BookmarksController < ApplicationController
 
   private
   def bookmarks_params
-    params.require(:bookmark).permit(:comment)
+    params.require(:bookmark).permit(:comment, :movie_id)
   end
 end

@@ -1,3 +1,5 @@
+<div class="list-show-background">
+
 <h1>This is <%=@list.name%></h1>
 
 <h2>What details do you need?</h2>
@@ -7,8 +9,12 @@
 <h3>These are the bookmarks: <%@bookmark.each do |info| %></h3>
 <p><%= info["comment"] %></p>
 <p><%= link_to "delete this bookmark", bookmark_path(info["id"]), method: :delete %></p>
-<% end %>
+<% end %><br>
 
-<%= link_to "delete this list", list_path(@list.id), method: :delete %>
+<%= link_to "delete this list", list_path(@list.id), class: "btn btn-danger", method: :delete%><br>
+<%= link_to "back to the main list", lists_path, class: "btn btn-primary" %><br>
+<%= link_to "Add a bookmark", new_list_bookmark_path(@list.id), class: "btn btn-primary" %>
+
+</div>
 
 
