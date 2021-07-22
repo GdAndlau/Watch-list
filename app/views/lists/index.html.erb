@@ -3,7 +3,7 @@
 
 </nav>
 <div class="index-background">
-  <h1>There are all the lists</h1>
+  <h1>There all the lists</h1>
 
 
   <% @lists.each do |list| %>
@@ -11,4 +11,13 @@
     <li><%= link_to list.name, list_path(list.id) %></li>
   </ul>
   <% end %>
-</div>
+
+
+
+
+<%= cl_image_tag("nbponr0wdcs4zicumkux", width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("rqphg5vidkhishzsrcpx", width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
+
+

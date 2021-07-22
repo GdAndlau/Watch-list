@@ -2,8 +2,9 @@
 
   <h1>So you want to add a list?</h1>
 
-  <%= form_for @list do |f| %>
-    List name: <%= f.text_field :name %><br />
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.submit %>
   <% end %>
 
